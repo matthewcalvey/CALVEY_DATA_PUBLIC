@@ -1,0 +1,59 @@
+{
+  "_comment": "Per-metro source registry. Populated by acquisition scripts at scripts/acquire/<metro_slug>.py during Phase 2 Task 3. Each entry is keyed by the metro_slug used in the parcels.source column. acquired_at: null indicates the partition has not been loaded yet.",
+  "massgis_l3_boston_metro": {
+    "publisher": "MassGIS",
+    "license": "open public records",
+    "attribution_url": "https://www.mass.gov/info-details/massgis-data-property-tax-parcels",
+    "source_url": "https://services1.arcgis.com/hGdibHYSPO59RG1h/ArcGIS/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+    "source_crs": "EPSG:26986",
+    "vintage": "MassGIS L3 2026-Q1",
+    "acquired_at": "2026-05-09T04:28:21Z",
+    "parcel_count": 276683,
+    "metro_filter": "CITY IN ('BOSTON','CAMBRIDGE','SOMERVILLE','BROOKLINE','NEWTON')",
+    "_acquisition_note": "Acquired via FeatureServer query (not bulk-zip) \u2014 bypassed the L3_AGGREGATE_SHP_20260101.zip path due to per-municipality nesting. Source CRS recorded as EPSG:26986 (the FeatureServer native), reprojected to EPSG:4326 by ogr2ogr at acquire time."
+  },
+  "nyc_mappluto": {
+    "publisher": "NYC Department of City Planning",
+    "license": "NYC Open Data Terms",
+    "attribution_url": "https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page",
+    "source_url": "https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page",
+    "source_crs": "EPSG:2263",
+    "vintage": null,
+    "acquired_at": null,
+    "parcel_count": null,
+    "metro_filter": "(none \u2014 full five boroughs)"
+  },
+  "dcgis_parcel_lots": {
+    "publisher": "DCGIS",
+    "license": "CC-BY 4.0",
+    "attribution_url": "https://opendata.dc.gov/datasets/DCGIS::parcel-lots/about",
+    "source_url": "https://opendata.dc.gov/datasets/DCGIS::parcel-lots/",
+    "source_crs": "EPSG:26985",
+    "vintage": null,
+    "acquired_at": null,
+    "parcel_count": null,
+    "metro_filter": "(none \u2014 single jurisdiction)"
+  },
+  "opendataphilly_dor": {
+    "publisher": "City of Philadelphia Department of Records",
+    "license": "CC-BY 4.0",
+    "attribution_url": "https://opendataphilly.org/datasets/department-of-records-property-parcels/",
+    "source_url": "https://opendataphilly.org/datasets/department-of-records-property-parcels/",
+    "source_crs": "EPSG:2272",
+    "vintage": null,
+    "acquired_at": null,
+    "parcel_count": null,
+    "metro_filter": "(none \u2014 full city)"
+  },
+  "ct_statewide_hartford_metro": {
+    "publisher": "CT Office of Policy and Management / CT geodata",
+    "license": "open public records",
+    "attribution_url": "https://geodata.ct.gov/datasets/ctmaps::connecticut-state-parcel-layer-2024/",
+    "source_url": "https://geodata.ct.gov/datasets/ctmaps::connecticut-state-parcel-layer-2024/",
+    "source_crs": "EPSG:2234",
+    "vintage": null,
+    "acquired_at": null,
+    "parcel_count": null,
+    "metro_filter": "TOWN IN ('HARTFORD','WEST HARTFORD','EAST HARTFORD','MANCHESTER','GLASTONBURY')"
+  }
+}
